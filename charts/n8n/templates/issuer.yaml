@@ -1,0 +1,15 @@
+{{- $fullName := include "n8n.fullname" . -}}
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: {{ include "n8n.fullname" $ }}-letsencrypt-prod
+spec:
+  acme:
+    email: admin@robodesk.ai
+    privateKeySecretRef:
+      name: {{ include "n8n.fullname" $ }}-letsencrypt-prod
+    server: https://acme-v02.api.letsencrypt.org/directory
+    solvers:
+    - http01:
+        ingress:
+          class: nginx
