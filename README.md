@@ -833,3 +833,5 @@ instance is disabled and by default a single webhook instance is started.
 1. Update the `Chart.yaml` with the new version numbers for the chart and/or app.
 2. In `Chart.yaml`update/replace the content of the `artifacthub.io/changes` section. See Artifacthub [annotation referene](https://artifacthub.io/docs/topics/annotations/helm/)
 3. In GitHub create a new release with the the chart version number as the tag and a title.
+#   n 8 n 2  
+ 
